@@ -54,12 +54,12 @@ ___________________________________________________________*/
 /* inside element for arrow image */
 .toggler span {
 	display: block;
-	background: url("../../files/contaodemo/theme/img/icons/icon_arrow-bottom.png") no-repeat 100% 5px;
+	background: url("../img/icons/icon_arrow-bottom.png") no-repeat 100% 5px;
 }
 
 /* inside active */
 .toggler.active span {
-	background-image: url("../../files/contaodemo/theme/img/icons/icon_arrow-top.png");
+	background-image: url("../img/icons/icon_arrow-top.png");
 }
 
 /* inner accordion wrapper */
@@ -1093,7 +1093,7 @@ darkgrey:
 
 /* Native elements */
 body {
-    background: url("../../files/contaodemo/theme/img/bg/body.png");
+    background: url("../img/bg/body.png");
     font-family: Arial, Helvetica, sans-serif;
     color: #60584d;
     font-size:62.5%;
@@ -1522,20 +1522,20 @@ ___________________________________________________________*/
     padding: 10px;
     color: #7f7266;
     text-decoration: none;
-	background: url("../../files/contaodemo/theme/img/icons/icon_arrow-right-grey.png") no-repeat 95% 50% #f4f2f0;
+	background: url("../img/icons/icon_arrow-right-grey.png") no-repeat 95% 50% #f4f2f0;
     font-size: 1.6em;
 }
 
 .nav-left a:hover {
 	color: #ed7404;
-	background-image: url("../../files/contaodemo/theme/img/icons/icon_arrow-right-orange.png");
+	background-image: url("../img/icons/icon_arrow-right-orange.png");
 }
 
 .nav-left strong.active,
 .nav-left strong.trail,
 .nav-left a.trail {
 	background-color: #ed7404;
-	background-image: url("../../files/contaodemo/theme/img/icons/icon_arrow-right-darkorange.png");
+	background-image: url("../img/icons/icon_arrow-right-darkorange.png");
 	color: #fff;
 	border-top-color: #ff9b50;
 }
@@ -1720,7 +1720,7 @@ ___________________________________________________________*/
 
 .mod_breadcrumb li {
 	float: left;
-	background: url("../../files/contaodemo/theme/img/icons/icon_arrow-small.png") no-repeat 100% 50%;
+	background: url("../img/icons/icon_arrow-small.png") no-repeat 100% 50%;
 	padding-right: 15px;
 	padding-left: 5px;
 }
@@ -1756,17 +1756,17 @@ ___________________________________________________________*/
 }
 
 .mod_sitemap li {
-	background: url("../../files/contaodemo/theme/img/bg/sitemap_normal.png") no-repeat 0 0px;
+	background: url("../img/bg/sitemap_normal.png") no-repeat 0 0px;
 	padding: 0px 0 5px 15px;
 	margin: 0;
 }
 
 .mod_sitemap > ul > li.first {
-	background-image: url("../../files/contaodemo/theme/img/bg/sitemap_first.png");
+	background-image: url("../img/bg/sitemap_first.png");
 }
 
 .mod_sitemap li.last {
-	background-image: url("../../files/contaodemo/theme/img/bg/sitemap_last.png");
+	background-image: url("../img/bg/sitemap_last.png");
 }
 
 .mod_sitemap ul ul {
@@ -1811,7 +1811,7 @@ ___________________________________________________________*/
 {
 
 	.nav-main {
-		background: url("../../files/contaodemo/theme/img/nav_mobile.png") no-repeat 50% 50% #ed7404;
+		background: url("../img/nav_mobile.png") no-repeat 50% 50% #ed7404;
 		width: 35px;
 		height: 33px;
 	}
@@ -2031,7 +2031,7 @@ ___________________________________________________________*/
     padding: 10px;
     color: #7f7266;
     text-decoration: none;
-	background: url("../../files/contaodemo/theme/img/icons/icon_arrow-right-grey.png") no-repeat 95% 50%;
+	background: url("../img/icons/icon_arrow-right-grey.png") no-repeat 95% 50%;
 	font-size: 0.9em;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #e1dad6;
@@ -2040,11 +2040,11 @@ ___________________________________________________________*/
 .mod_newsmenu a:hover,
 .mod_newsmenu span.active {
 	color: #ed7404;
-	background-image: url("../../files/contaodemo/theme/img/icons/icon_arrow-right-orange.png");
+	background-image: url("../img/icons/icon_arrow-right-orange.png");
 }
 .mod_newsmenu span.active {
 	background-color: #ed7404;
-	background-image: url("../../files/contaodemo/theme/img/icons/icon_arrow-right-darkorange.png");
+	background-image: url("../img/icons/icon_arrow-right-darkorange.png");
 	color: #fff;
 	border-top-color: #ff9b50;
 }
