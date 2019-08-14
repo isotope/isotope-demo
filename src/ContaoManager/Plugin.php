@@ -18,13 +18,7 @@ class Plugin implements ExtensionPluginInterface
     public function getExtensionConfig($extensionName, array $extensionConfigs, ContainerBuilder $container)
     {
         if ('contao' === $extensionName) {
-            $hasPrepend = array_reduce($extensionConfigs, function($c, $config) {
-                return (isset($config['prepend_locale']) && '%prepend_locale%' !== $config['prepend_locale']) || $c;
-            }, false);
-
-            if (!$hasPrepend) {
-                $extensionConfigs[] = ['prepend_locale' => true];
-            }
+            $extensionConfigs[] = ['prepend_locale' => true];
         }
 
         return $extensionConfigs;
