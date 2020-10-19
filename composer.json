@@ -18,7 +18,7 @@
     },
     "require": {
         "php": "^7.2",
-        "composer-plugin-api": "^1.1",
+        "composer-plugin-api": "^1.1 || ^2.0",
         "contao/manager-bundle": "4.9.*",
         "isotope/isotope-core": "2.6.*",
         "terminal42/contao-easy_themes": "^2.2",
