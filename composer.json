@@ -5,7 +5,7 @@
     "keywords":["contao", "isotope"],
     "type": "composer-plugin",
     "license": "LGPL-3.0-or-later",
-    "version": "2.7.0",
+    "version": "2.8.0",
     "authors":[
         {
             "name": "Isotope Workgroup",
@@ -17,11 +17,11 @@
         "source": "https://github.com/isotope/demo"
     },
     "require": {
-        "php": "^7.2",
+        "php": "^7.4",
         "composer-plugin-api": "^1.1 || ^2.0",
-        "contao/manager-bundle": "4.9.*",
-        "isotope/isotope-core": "2.7.*",
-        "terminal42/contao-easy_themes": "^2.2",
+        "contao/manager-bundle": "4.13.*",
+        "isotope/isotope-core": "2.8.*",
+        "terminal42/contao-easy_themes": "^3.0",
         "terminal42/contao-changelanguage": "^3.1"
     },
     "require-dev": {
