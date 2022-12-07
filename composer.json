@@ -17,7 +17,7 @@
         "source": "https://github.com/isotope/demo"
     },
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 || ^8.0",
         "composer-plugin-api": "^1.1 || ^2.0",
         "contao/manager-bundle": "4.13.*",
         "isotope/isotope-core": "2.8.*",
