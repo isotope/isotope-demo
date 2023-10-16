@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables>
+  <table name="tl_theme">
+    <row>
+      <field name="id">1</field>
+      <field name="tstamp">1608161308</field>
+      <field name="name">Isotope eCommerce Demo</field>
+      <field name="author">Isotope eCommerce Workgroup</field>
+    </row>
+  </table>
+  <table name="tl_style_sheet"/>
+  <table name="tl_style"/>
+  <table name="tl_image_size"/>
+  <table name="tl_image_size_item"/>
+  <table name="tl_module"/>
+  <table name="tl_layout"/>
+  <table name="tl_files"/>
+</tables>

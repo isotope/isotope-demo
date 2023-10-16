@@ -1,11 +1,10 @@
 {
     "name": "isotope/isotope-demo",
+    "type": "contao-theme",
     "description": "Demo Version of Isotope eCommerce",
     "homepage": "https://isotopeecommerce.org/en/demo.html",
     "keywords":["contao", "isotope"],
-    "type": "composer-plugin",
     "license": "LGPL-3.0-or-later",
-    "version": "2.8.1",
     "authors":[
         {
             "name": "Isotope Workgroup",
@@ -17,29 +16,21 @@
         "source": "https://github.com/isotope/demo"
     },
     "require": {
-        "php": "^7.4 || ^8.0",
-        "composer-plugin-api": "^1.1 || ^2.0",
+        "contao/conflicts": "@dev",
         "contao/manager-bundle": "4.13.*",
         "isotope/isotope-core": "2.8.*",
         "terminal42/contao-easy_themes": "^3.0",
         "terminal42/contao-changelanguage": "^3.1"
     },
-    "require-dev": {
-        "contao/manager-plugin": "^2.7",
-        "composer/composer": "^1.9"
-    },
-    "conflict": {
-        "contao/manager-plugin": "<2.0 || >= 3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Isotope\\Demo\\": "src/"
-        }
-    },
     "extra": {
-        "class": "Isotope\\Demo\\Composer\\Plugin",
-        "contao-manager-plugin": "Isotope\\Demo\\ContaoManager\\Plugin"
+        "contao-component-dir": "assets"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "scripts": {
+        "post-install-cmd": [
+            "@php vendor/bin/contao-setup"
+        ],
+        "post-update-cmd": [
+            "@php vendor/bin/contao-setup"
+        ]
+    }
 }

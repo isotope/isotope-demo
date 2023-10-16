@@ -1,0 +1,2 @@
+contao:
+    prepend_locale: true
