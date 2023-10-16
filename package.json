@@ -1,0 +1,19 @@
+{
+  "name": "cypress integration for Isotope eCommerce demo",
+  "version": "1.0.0",
+  "description": "Setup of cypress for Isotope eCommerce demo",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "db:reset": "node cypress/e2e/resetDB-isotope-demo.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/cypress": "^10.0.1",
+    "cypress": "^13.3.0"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
