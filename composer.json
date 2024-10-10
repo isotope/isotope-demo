@@ -18,7 +18,7 @@
     "require": {
         "contao/conflicts": "@dev",
         "contao/manager-bundle": "4.13.*",
-        "isotope/isotope-core": "2.8.*",
+        "isotope/isotope-core": "2.9.*",
         "terminal42/contao-easy_themes": "^3.0",
         "terminal42/contao-changelanguage": "^3.1"
     },
