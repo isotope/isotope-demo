@@ -1,0 +1,84 @@
+// Shared table treatment for cart, checkout and order details.
+.content-iso-cart,
+.content-iso-checkout,
+.content-iso-orderdetails,
+.content-iso-orderhistory {
+    .formbody {
+        max-width: none;
+    }
+
+    table {
+        margin-block: 1rem;
+    }
+
+    td.image {
+        width: 6rem;
+
+        img {
+            max-width: 4rem;
+            height: auto;
+        }
+    }
+
+    :is(th, td):is(.price, .total, .tax, .quantity) {
+        text-align: right;
+    }
+
+    td.quantity input {
+        width: 5rem;
+        padding: 0.5rem;
+    }
+
+    tr.total td {
+        font-weight: 700;
+        color: var(--secondary-700);
+        border-top: 2px solid var(--primary-500);
+    }
+
+    .actions .submit {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .subtotal {
+        padding-block: 1rem;
+        border-top: 1px solid var(--gray-200);
+    }
+
+    .info {
+        margin-block-end: 1rem;
+    }
+
+    @include breakpoint(sm, max) {
+        td {
+            display: block;
+            text-align: left !important;
+            overflow-wrap: anywhere;
+        }
+
+        td.image {
+            width: auto;
+        }
+
+        td::before {
+            display: block;
+            content: attr(data-cellheadline);
+        }
+
+        td[data-cellheadline]:not([data-cellheadline=''])::before {
+            content: attr(data-cellheadline) ': ';
+        }
+
+        td:has(input) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        tr:is(.subtotal, .tax, .total) td.price:not(.total),
+        tr:is(.subtotal, .tax, .total) td.actions {
+            display: none;
+        }
+    }
+}

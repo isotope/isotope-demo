@@ -1,0 +1,11 @@
+{% extends '@Contao/isotope/product/reader.html.twig' %}
+
+{% block formbody %}
+    {{ parent() }}
+
+    {% if product.tracks|default %}
+        <div class="tracks">
+            {{ ('{{insert_content::' ~ product.tracks ~ '}}')|insert_tag_raw|raw }}
+        </div>
+    {% endif %}
+{% endblock %}

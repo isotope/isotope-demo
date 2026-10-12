@@ -1,0 +1,26 @@
+// The Contao demo design, followed by adaptations for the Isotope demo.
+@import 'app';
+@import 'demo/colors';
+@import 'demo/layout';
+@import 'demo/header';
+@import 'demo/footer';
+@import 'demo/homepage';
+@import 'isotope/buttons';
+@import 'isotope/product';
+@import 'isotope/product-list';
+@import 'isotope/specials-slider';
+@import 'isotope/product-reader';
+@import 'isotope/related-products';
+@import 'isotope/product-filter';
+@import 'isotope/category-filter';
+@import 'isotope/cumulative-filter';
+@import 'isotope/config-switcher';
+@import 'isotope/collection';
+@import 'isotope/cart';
+@import 'isotope/mini-cart';
+@import 'isotope/cart-address';
+@import 'isotope/shipping-calculator';
+@import 'isotope/checkout';
+@import 'isotope/order-details';
+@import 'isotope/order-history';
+@import 'isotope/favorites';

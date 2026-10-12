@@ -1,0 +1,52 @@
+.content-youtube,
+.content-vimeo {
+    figure {
+        line-height: 0;
+        margin: 0;
+
+        &.aspect {
+            position: relative;
+            width: 100%;
+
+            iframe {
+                position: absolute;
+                inset: 0;
+                z-index: 5;
+
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            figcaption {
+                position: absolute;
+                inset: auto 2px 2px;
+                z-index: 5;
+                padding: 2px;
+
+                background: linear-gradient(to top, rgb(0 0 0 / 70%), transparent);
+                color: var(--white);
+
+                text-align: center;
+                pointer-events: none;
+            }
+        }
+    }
+
+    [data-splash-screen] {
+        padding: 0;
+        position: relative;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            inset: 0;
+            padding-top: 10px;
+            color: var(--white);
+            pointer-events: none;
+        }
+    }
+}
+
+video {
+    max-width: 100%;
+}

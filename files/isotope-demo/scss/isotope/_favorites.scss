@@ -1,0 +1,8 @@
+.content-iso-favorites,
+.mod_iso_favorites {
+    @extend .content-iso-productlist;
+
+    .empty {
+        @extend .box--gray-light;
+    }
+}

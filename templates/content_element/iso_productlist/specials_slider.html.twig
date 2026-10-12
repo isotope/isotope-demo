@@ -1,0 +1,24 @@
+{% extends '@Contao/content_element/swiper.html.twig' %}
+
+{# The existing specials category supplies the slides, so catalogue changes are live. #}
+{% set slider_settings = {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    speed: 400,
+    loop: products|length > 1,
+    a11y: {
+        prevSlideMessage: app.request.locale == 'de' ? 'Vorheriges Angebot' : 'Previous special',
+        nextSlideMessage: app.request.locale == 'de' ? 'Nächstes Angebot' : 'Next special'
+    },
+    keyboard: {enabled: true, onlyInViewport: true}
+} %}
+
+{% block slides %}
+    {% for product in products %}
+        <div class="swiper-slide">
+            {{ isotope_product(product, view) }}
+        </div>
+    {% else %}
+        <p>{{ 'MSC.noProducts'|trans({}, 'contao_default') }}</p>
+    {% endfor %}
+{% endblock %}

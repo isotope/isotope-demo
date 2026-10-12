@@ -1,0 +1,17 @@
+{% extends '@Contao/fe_page.html.twig' %}
+
+{% block header %}
+    {% if header %}
+        <header id="header">
+            <div class="inside">
+                {{ header|raw }}
+                <div class="nav-toggle__box">
+                    <button type="button" class="nav-toggle" data-nav-toggle aria-controls="nav-main" aria-expanded="false">
+                        <span class="nav-toggle__icon" aria-hidden="true"><span class="icon-line"></span></span>
+                        {{ language == 'de' ? 'Menü' : 'Menu' }}
+                    </button>
+                </div>
+            </div>
+        </header>
+    {% endif %}
+{% endblock %}

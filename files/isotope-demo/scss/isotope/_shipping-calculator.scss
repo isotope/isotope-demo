@@ -1,0 +1,15 @@
+.content-iso-shipping-calculator,
+.content-iso-shipping_calculator,
+.mod_iso_shipping_calculator {
+    margin-block: 1.5rem;
+
+    .shipping {
+        padding: 1rem;
+        background: var(--gray-100);
+    }
+
+    .price {
+        font-weight: 600;
+        color: var(--secondary-700);
+    }
+}

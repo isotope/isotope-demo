@@ -1,0 +1,11 @@
+.content-iso-orderdetails {
+    h2:not(:first-child) {
+        @include set-font-size(title-5);
+    }
+
+    .info_container {
+        display: grid;
+        gap: 1.5rem;
+        margin-block: 2rem;
+    }
+}

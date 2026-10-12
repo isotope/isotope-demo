@@ -1,0 +1,110 @@
+// searchbar inside header
+.searchbar {
+    .formbody {
+        position: relative;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .text {
+        border-radius: 5rem;
+
+        padding-inline: 1.5rem 3.5rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        @include breakpoint(lg, max) {
+            padding-block: 0.75rem;
+        }
+    }
+
+    .widget-text {
+        position: relative;
+
+        label {
+            @include set-invisible;
+        }
+    }
+
+    .widget-radio {
+        width: 100%;
+    }
+
+    .widget-submit {
+        position: absolute;
+
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        width: 3.5rem;
+
+        border-radius: 0 5rem 5rem 0;
+    }
+
+    .submit {
+        position: relative;
+
+        height: 100%;
+        width: 100%;
+        text-indent: -9999px;
+
+        background: transparent url('#{$img-path}/icons/search.svg') 7px center no-repeat !important;
+        border-radius: 0 5rem 5rem 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    // searchfield inside header
+    &--simple {
+        @include breakpoint(xs, max) {
+            display: none;
+        }
+
+        &,
+        .widget-text {
+            @include breakpoint(md, max) {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    // searchform
+    &--extended {
+        .widget-text {
+            max-width: 32rem;
+        }
+
+        .widget-submit {
+            bottom: initial;
+            height: 58px;
+
+            @media only screen and (min-width: #{(32rem + (2 * $s-grid-outer-gutter--large))}) {
+                right: calc(100% - 32rem);
+            }
+
+            @include breakpoint(lg, max) {
+                height: 50px;
+            }
+        }
+
+        .radio_container {
+            flex-direction: row;
+        }
+
+        .header {
+            margin-top: 2.5rem;
+
+            ~ div {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

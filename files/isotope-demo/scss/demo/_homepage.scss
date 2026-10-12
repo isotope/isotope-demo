@@ -1,0 +1,33 @@
+// Use the Contao article grid for the description, login panels and prefooter.
+.homepage-login {
+    .mod_article__inner {
+        align-items: stretch;
+        row-gap: 3rem;
+    }
+
+    .login-panel {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    .login-panel > .content-text {
+        margin-block-end: 2rem;
+    }
+
+    .grid-box {
+        flex-grow: 1;
+    }
+
+    .mod_login {
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+}
+
+.prefooter .homepage-newest .product_list {
+    @include breakpoint(sm) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

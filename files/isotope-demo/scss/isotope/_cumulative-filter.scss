@@ -1,0 +1,25 @@
+.content-iso-cumulativefilter,
+.mod_iso_cumulativefilter {
+    .label {
+        font-weight: 600;
+        color: var(--secondary-700);
+    }
+
+    li ul {
+        margin-block-start: 0.5rem;
+        padding-inline-start: 1rem;
+    }
+
+    li li {
+        list-style: disc;
+    }
+
+    a {
+        display: block;
+        padding-block: 0.5rem;
+    }
+
+    .clearall {
+        font-size: 0.875rem;
+    }
+}

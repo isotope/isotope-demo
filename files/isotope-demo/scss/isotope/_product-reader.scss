@@ -1,0 +1,36 @@
+.content-iso-productreader {
+    .product > :is(form > .formbody, .formbody) {
+        gap: 1.5rem;
+    }
+
+    .product h2 {
+        margin-block: 0;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        figure {
+            width: 6rem;
+            max-width: 100%;
+        }
+    }
+
+    .description {
+        max-width: 48rem;
+    }
+
+    .tracks .content-table {
+        margin: 0;
+    }
+
+    .tracks :is(.head_2, .col_0, .col_2) {
+        text-align: right;
+    }
+
+    .back {
+        margin-block-start: 2rem;
+    }
+}

@@ -1,0 +1,56 @@
+.content-iso-productlist {
+    .product_list {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @include breakpoint(xxl) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    .product {
+        min-width: 0;
+        padding: 1.5rem;
+        background: var(--white);
+        border: 1px solid var(--gray-200);
+        border-radius: $s-border--radius;
+
+        h3 {
+            @include set-font-size(title-6);
+            margin-block: 0 1rem;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .formbody {
+            gap: 1rem;
+        }
+
+        .formbody > :is(.offer, .submit_container) {
+            margin: 0;
+        }
+
+        .image_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    em {
+        background: var(--primary-50);
+        font-style: normal;
+    }
+}

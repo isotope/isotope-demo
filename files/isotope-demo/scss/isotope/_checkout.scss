@@ -1,0 +1,54 @@
+.content-iso-checkout {
+    .steps {
+        display: grid;
+        gap: 2rem;
+    }
+
+    .steps > div,
+    .summary {
+        padding: 1.5rem;
+        background: var(--white);
+        border: 1px solid var(--gray-200);
+        border-radius: $s-border--radius;
+        @include breakpoint(md) {
+            padding: 2rem;
+        }
+    }
+
+    .steps .current {
+        border-color: var(--primary-500);
+    }
+
+    .steps .pending {
+        color: var(--gray-500);
+    }
+
+    .steps h3,
+    .summary h3 {
+        @include set-font-size(title-5);
+        margin-block: 0 1.5rem;
+    }
+
+    .summary {
+        margin-block-start: 2rem;
+    }
+
+    .radio_container {
+        line-height: 1.5;
+    }
+
+    .info_container {
+        display: grid;
+        gap: 1.5rem;
+        margin-block: 2rem;
+    }
+
+    .edit {
+        display: inline-block;
+        margin-block: 0.5rem;
+    }
+
+    #place_order {
+        margin-block-start: 2rem;
+    }
+}

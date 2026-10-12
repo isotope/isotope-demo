@@ -1,0 +1,19 @@
+:is([class*='content-iso-'], [class*='mod_iso_']) {
+    .button,
+    a.go_to_cart,
+    a.go_to_checkout,
+    a.continue_shopping {
+        @extend .button-primary;
+        @extend .button--md;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .submit_container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        gap: 1rem;
+        margin-block-start: 1.5rem;
+    }
+}

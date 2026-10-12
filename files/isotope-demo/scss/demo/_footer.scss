@@ -1,0 +1,75 @@
+#footer .inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 3rem 2rem;
+
+    @include breakpoint(sm) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include breakpoint(lg) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .footer-navigation {
+        h2 {
+            @include set-font-size(title-6);
+            margin-block: 0 1.5rem;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li + li {
+            margin-block-start: 0.75rem;
+        }
+
+        :is(a, strong) {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus-visible {
+            text-decoration: underline;
+            text-underline-offset: 0.3em;
+        }
+    }
+
+    .footer-info {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .footer-content {
+        @include set-font-size(text--sm);
+
+        h2 {
+            @include set-font-size(title-6);
+            margin-block: 0 1rem;
+        }
+    }
+}
+
+.isotope-home a::before,
+.isotope-github a::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-inline-end: 0.5rem;
+    vertical-align: -0.125em;
+    background-color: currentColor;
+    mask: var(--footer-link-icon) center / contain no-repeat;
+}
+
+.isotope-home a {
+    --footer-link-icon: url('#{$img-path}/icons/lucide-house.svg');
+}
+
+.isotope-github a {
+    --footer-link-icon: url('#{$img-path}/icons/lucide-github.svg');
+}

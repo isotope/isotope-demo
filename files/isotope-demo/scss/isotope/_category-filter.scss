@@ -1,0 +1,26 @@
+.content-iso-categoryfilter {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul ul {
+        padding-inline-start: 1rem;
+    }
+
+    a {
+        display: block;
+        padding-block: 0.5rem;
+        text-decoration: none;
+    }
+
+    :is(a.active, .active > a, strong) {
+        color: var(--primary-600);
+        font-weight: 600;
+    }
+
+    .active > a::after {
+        content: ' \2713';
+    }
+}

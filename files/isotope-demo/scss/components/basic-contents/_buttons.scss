@@ -1,0 +1,191 @@
+// sizes
+
+$s-button--border-size: 0.0625rem;
+$s-button--border-radius-lg: 0.5rem;
+$s-button--border-radius-md: 0.375rem;
+$s-button--border-radius-sm: 0.25rem;
+$s-btn-space--inner-lg: calc(1.25rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+$s-btn-space--inner-md: calc(1rem - #{$s-button--border-size}) calc(1.25rem - #{$s-button--border-size});
+$s-btn-space--inner-sm: calc(0.75rem - #{$s-button--border-size}) calc(1rem - #{$s-button--border-size});
+
+// btn primary colors
+$c-btn-primary--text: var(--white);
+$c-btn-primary--text-hover: var(--white);
+$c-btn-primary--text-active: var(--white);
+$c-btn-primary--background: var(--primary-500);
+$c-btn-primary--background-hover: var(--primary-600);
+$c-btn-primary--background-active: var(--primary-500);
+$c-btn-primary--text-disabled: var(--gray-500);
+$c-btn-primary--background-disabled: var(--gray-200);
+$c-btn-primary--border: transparent;
+$c-btn-primary--border-hover: transparent;
+$c-btn-primary--border-active: transparent;
+$c-btn-primary--text-disabled: var(--gray-400);
+$c-btn-primary--background-disabled: var(--gray-100);
+$c-btn-primary--border-disabled: var(--gray-300);
+
+// btn secondary colors
+$c-btn-secondary--text: var(--secondary-700);
+$c-btn-secondary--text-hover: var(--primary-500);
+$c-btn-secondary--text-active: var(--primary-500);
+$c-btn-secondary--text-disabled: var(--gray-400);
+$c-btn-secondary--background: var(--white);
+$c-btn-secondary--background-hover: var(--white);
+$c-btn-secondary--background-active: var(--white);
+$c-btn-secondary--background-disabled: var(--gray-100);
+$c-btn-secondary--border: var(--gray-200);
+$c-btn-secondary--border-hover: var(--primary-500);
+$c-btn-secondary--border-active: var(--primary-500);
+$c-btn-secondary--text-disabled: var(--gray-400);
+$c-btn-secondary--background-disabled: var(--gray-100);
+$c-btn-secondary--border-disabled: var(--gray-300);
+
+%button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    border: $s-button--border-size solid transparent;
+
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    &:active {
+    }
+
+    &:disabled,
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+
+.button {
+    // layout
+    &-primary {
+        @extend %button;
+
+        background: $c-btn-primary--background;
+        transition: background $t-animation--fast $s-animation--fkt;
+        border: $s-button--border-size solid transparent;
+
+        color: $c-btn-primary--text;
+
+        &:hover,
+        &:focus {
+            background: $c-btn-primary--background-hover;
+        }
+
+        &:disabled,
+        &[disabled] {
+            background: var(--gray-200);
+
+            color: $c-btn-primary--text-disabled;
+        }
+    }
+
+    &-secondary {
+        @extend %button;
+
+        background: $c-btn-secondary--background;
+        transition:
+            background $t-animation--fast $s-animation--fkt,
+            border-color $t-animation--fast $s-animation--fkt,
+            color $t-animation--fast $s-animation--fkt;
+        border: $s-button--border-size solid var(--gray-200);
+
+        color: $c-btn-secondary--text;
+
+        &:hover,
+        &:focus {
+            background: $c-btn-secondary--background-hover;
+            border-color: $c-btn-secondary--border-hover;
+
+            color: $c-btn-secondary--text-hover;
+        }
+
+        &:disabled,
+        &[disabled] {
+            background: var(--gray-200);
+
+            color: $c-btn-secondary--text-disabled;
+        }
+    }
+
+    // sizes
+    &--lg {
+        padding: calc(0.875rem - #{$s-button--border-size}) calc(0.75rem - #{$s-button--border-size});
+
+        border-radius: $s-button--border-radius-lg;
+
+        font-size: 1rem;
+        line-height: 1.25rem;
+
+        @include breakpoint(md) {
+            padding: calc(1rem - #{$s-button--border-size}) calc(1.25rem - #{$s-button--border-size});
+        }
+
+        @include breakpoint(xl) {
+            padding: calc(1.25rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    &--md {
+        padding: calc(1.25rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+
+        border-radius: $s-button--border-radius-md;
+
+        font-size: 0.875rem;
+        line-height: 1rem;
+
+        @include breakpoint(md) {
+            padding: calc(1rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+        }
+
+        @include breakpoint(xl) {
+            padding: calc(1rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    &--sm {
+        padding: calc(0.5rem - #{$s-button--border-size}) calc(0.75rem - #{$s-button--border-size});
+
+        border-radius: $s-button--border-radius-sm;
+
+        font-size: 0.75rem;
+        line-height: 0.875rem;
+
+        @include breakpoint(md) {
+            padding: calc(0.625rem - #{$s-button--border-size}) calc(0.875rem - #{$s-button--border-size});
+        }
+
+        @include breakpoint(xl) {
+            padding: calc(0.75rem - #{$s-button--border-size}) calc(1rem - #{$s-button--border-size});
+
+            font-size: 0.875rem;
+            line-height: 1rem;
+        }
+    }
+
+    // wrapper
+    &-group {
+        display: flex;
+
+        margin-block: 2rem;
+
+        gap: 1rem;
+    }
+}

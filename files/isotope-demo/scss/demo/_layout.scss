@@ -1,0 +1,84 @@
+// Adapt the original demo's articles to Contao's current grid.
+#main,
+#left,
+.mod_article,
+.mod_article__inner > * {
+    min-width: 0;
+}
+
+// Shop navigation and the mini cart remain available on smaller screens.
+.layout--2-column #left {
+    display: block;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-block: 2rem;
+
+    @include breakpoint(lg) {
+        grid-column: 1 / 5;
+        grid-row: 1;
+        margin-block: 4rem 8rem;
+    }
+
+    @include breakpoint(xl) {
+        grid-column: 1 / 4;
+    }
+
+    .inside > * + * {
+        margin-block-start: 2rem;
+    }
+
+    h2 {
+        @include set-font-size(title-6);
+    }
+}
+
+.mod_article__inner > :is(.content-headline, .ce_headline) {
+    margin-block-end: 0;
+}
+
+.box-1 {
+    @extend .box--gray-light;
+}
+
+// Legacy accordion content still uses the old Contao template classes.
+.ce_accordion .toggler button {
+    @extend .handorgel__header__button;
+    width: 100%;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+.ce_accordion .accordion {
+    padding: 1.5rem;
+    background: var(--white);
+}
+
+.mod_article__inner > .ce_accordion {
+    margin-block: 0.25rem;
+}
+
+.ce_accordion .toggler.open button::after {
+    opacity: 1;
+}
+
+.ce_accordion .toggler.open button::before {
+    opacity: 0;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0s !important;
+    }
+}

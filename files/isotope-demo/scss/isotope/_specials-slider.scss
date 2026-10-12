@@ -1,0 +1,76 @@
+// Product slides follow the Contao demo's text/image slider proportions.
+.specials-slider {
+    .special-product {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: var(--gray-100);
+
+        @include breakpoint(lg) {
+            flex-direction: row;
+        }
+    }
+
+    .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
+
+        @include breakpoint(lg) {
+            flex: 1 1 50%;
+            padding: 3rem;
+        }
+    }
+
+    .title {
+        @extend .display-title-1;
+        font-weight: 300;
+        margin-block: 0 1.5rem;
+    }
+
+    .special-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: var(--secondary-700);
+
+        @include breakpoint(lg) {
+            flex: 1 1 50%;
+            min-height: 28rem;
+        }
+
+        figure {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .specials-label {
+        margin-block: 0 1rem;
+        color: var(--primary-700);
+        font-weight: 600;
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .swiper-slide .product .image_container {
+        height: auto;
+    }
+}

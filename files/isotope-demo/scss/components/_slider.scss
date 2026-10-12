@@ -1,0 +1,133 @@
+$slider-breakpoint: lg;
+
+/** Reset for the button */
+.swiper-horizontal {
+    .swiper-button-next,
+    .swiper-button-prev,
+    ~ .swiper-button-next,
+    ~ .swiper-button-prev {
+        margin-top: 0;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: var(--swiper-theme-color);
+    color: var(--swiper-button-color);
+    position: relative;
+    border: none;
+    outline: 0;
+    padding: 14px;
+    transition: background ease-in-out $t-animation--fast;
+    border-radius: 0.25rem;
+
+    &:is(:hover, :focus-visible) {
+        --swiper-theme-color: var(--primary-500);
+    }
+
+    &:focus-visible {
+        border: 2px solid var(--swiper-theme-color);
+    }
+}
+
+.swiper-button-prev {
+    order: 1;
+}
+
+.swiper-button-next {
+    order: 3;
+}
+
+.swiper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+
+    > .swiper-pagination-bullets {
+        order: 2;
+        width: auto;
+        line-height: 0;
+        position: relative;
+    }
+}
+
+.swiper-pagination-bullet {
+    transition: background ease-in-out $t-animation--fast;
+
+    &:is(:hover, :focus-visible) {
+        --swiper-pagination-bullet-inactive-opacity: 1;
+    }
+}
+
+.swiper-slide {
+    display: flex;
+    height: auto;
+
+    background: var(--gray-100);
+
+    // slider contents
+    .content-text {
+        display: flex;
+
+        overflow: hidden;
+
+        @include breakpoint(#{$slider-breakpoint}, max) {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        figure,
+        .text-wrapper {
+            @include breakpoint(#{$slider-breakpoint}) {
+                flex: 1 1 50%;
+            }
+        }
+
+        figure {
+            background-color: var(--swiper-theme-color);
+
+            @include breakpoint(#{$slider-breakpoint}) {
+                order: 1;
+            }
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .text-wrapper {
+            @include set-font-size(text--md);
+
+            padding: 2rem;
+
+            @include breakpoint(md) {
+                @include set-font-size(text--lg);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        .title {
+            @extend .display-title-1;
+            font-weight: 300;
+
+            margin-block: 0 3rem;
+        }
+    }
+
+    figure {
+        margin: 0;
+    }
+}
+
+@include breakpoint(lg, max) {
+    :root {
+        --swiper-navigation-sides-offset: #{$s-grid-outer-gutter--large};
+    }
+}

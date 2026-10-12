@@ -1,0 +1,79 @@
+#header {
+    .header-top-bar .inner {
+        gap: 0.75rem 1.5rem;
+    }
+}
+
+.mod_changelanguage {
+    ul {
+        display: flex;
+        gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+    }
+
+    :is(a, strong) {
+        display: block;
+        font-size: 0.875rem;
+        color: var(--secondary-700);
+        text-decoration: none;
+    }
+
+    :is(a:hover, a:focus-visible, strong) {
+        text-decoration: underline;
+        text-decoration-color: var(--primary-500);
+        text-underline-offset: 0.4em;
+    }
+}
+
+.searchbar .submit {
+    font-size: 0;
+}
+
+// Keep the language, currency and search controls accessible on phones.
+@include breakpoint(xs, max) {
+    #header .inside {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas: 'logo mainbar' 'metabar metabar';
+        gap: 1.25rem;
+    }
+
+    .header-top-bar {
+        display: block;
+    }
+
+    .header-top-bar .inner {
+        justify-content: flex-start;
+    }
+
+    .searchbar--simple {
+        display: block;
+        width: 100%;
+    }
+}
+
+// A usable menu is also available when JavaScript is disabled.
+@include breakpoint(lg, max) {
+    html:not(.js) {
+        .nav-toggle__box {
+            display: none;
+        }
+
+        .nav-main {
+            position: static;
+            grid-column: 1 / -1;
+            grid-area: auto;
+
+            ul {
+                display: flex;
+            }
+        }
+    }
+}

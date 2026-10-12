@@ -1,0 +1,14 @@
+.content-iso-cart {
+    .submit_container {
+        gap: 0.75rem;
+    }
+
+    .name ul {
+        padding-inline-start: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .empty {
+        @extend .box--gray-light;
+    }
+}

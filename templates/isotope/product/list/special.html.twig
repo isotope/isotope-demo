@@ -1,0 +1,17 @@
+{% extends '@Contao/isotope/product/list.html.twig' %}
+{% trans_default_domain 'contao_default' %}
+
+{% set product_attributes = attrs(product_attributes|default).addClass('special-product') %}
+
+{% block formbody %}
+    <div class="text-wrapper">
+        <p class="specials-label">{{ app.request.locale == 'de' ? 'Unsere Angebote' : 'Our specials' }}</p>
+        <h2 class="title">{{ product.name }}</h2>
+        {% if product.teaser|default %}<div class="teaser">{{ product.teaser|nl2br }}</div>{% endif %}
+        {{ block('product_price') }}
+        {% if href|default %}
+            <a class="button-primary button--lg" href="{{ href }}">{{ 'MSC.detailLabel'|trans }}</a>
+        {% endif %}
+    </div>
+    <div class="special-image">{{ block('main_image') }}</div>
+{% endblock %}
