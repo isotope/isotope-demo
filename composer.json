@@ -40,6 +40,6 @@
             "contao/manager-plugin": true
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "RC",
     "prefer-stable": true
 }
